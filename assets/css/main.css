@@ -292,7 +292,7 @@ iframe {
 
 .backlinks a {
   flex: 100%;
-  color: rgba(10, 132, 255, 0.75);
+  color: rgba(10, 132, 255);
 }
 
 dl {

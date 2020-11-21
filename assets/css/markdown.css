@@ -1,0 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css");
+
+.markdown-body dl dt {
+    margin-top: 0px;
+    font-style: normal;
+    font-weight: bold;
+}
+
