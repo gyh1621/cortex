@@ -197,10 +197,11 @@ header {
   border-left: 1px solid rgba(0, 0, 0, 0.05);
   display: inline-block;
   width: 625px;
-  max-width: 625px;
+  /* max-width: 625px; */
   height: 100% !important;
   max-height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   vertical-align: top;
   box-sizing: border-box;
 }

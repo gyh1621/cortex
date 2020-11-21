@@ -60,6 +60,12 @@ function fetchNote(href, level) {
           if (window.MathJax) {
             window.MathJax.typeset();
           }
+          $(function () {
+            $(".page").resizable({
+              handles: 'e', minWidth: 400,
+              maxWidth: 1000
+            });
+          });
         }.bind(null, element, level),
         10
       );
