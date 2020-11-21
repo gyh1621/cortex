@@ -3,7 +3,7 @@
   <div class="grid">
     <div class="page">
       <div class="content">
-        {{ range .Pages }}
+        {{ range .Pages.ByTitle }}
         <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
         {{ end }}
       </div>
