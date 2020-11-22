@@ -8,6 +8,8 @@
 
 {{ $main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
 {{ $markdown := resources.Get "css/markdown.css" | resources.Minify | resources.Fingerprint }}
+{{ $search := resources.Get "css/search.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $main.Permalink }}"/>
 <link rel="stylesheet" href="{{ $markdown.Permalink }}"/>
+<link rel="stylesheet" href="{{ $search.Permalink }}"/>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">

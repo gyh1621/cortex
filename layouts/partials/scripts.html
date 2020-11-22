@@ -1,3 +1,6 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+{{ $fastsearchjs := resources.Get "js/fastsearch.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $fastsearchjs.Permalink }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.3"></script>

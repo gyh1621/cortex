@@ -1,0 +1,84 @@
+#fastSearch {
+  visibility: hidden;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: inline-block;
+  width: 300px;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+#fastSearch input {
+  padding: 4px;
+  padding-right: 0px;
+  width: 100%;
+  height: 25px;
+  font-size: 1em;
+  color: #222129;
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  border-bottom: 1.2px solid #ccc;
+  outline: none;
+  text-align: left;
+  display: inline-block;
+
+}
+
+#searchResults li {
+  list-style: none;
+  margin-left: 0em;
+  line-height: 1em;
+  padding: 3px;
+}
+
+#searchResults li .title {
+  font-size: 1em;
+  margin: 0;
+  display: inline-block;
+  color: black;
+}
+
+#searchResults {
+  position: relative;
+  z-index: 10;
+  visibility: inherit;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  max-height: calc(100vh - 120px);
+  overflow: hidden;
+  margin-block-start: 3px;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: white;
+}
+
+#searchResults a {
+  text-decoration: none !important;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  color: black;
+}
+
+#searchResults a:hover, #searchResults a:focus {
+  outline: 0;
+  background-color:  #f5f5f5;
+}
+
+#search-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+}
+
+@media (max-width:683px) {
+  #fastSearch, #search-btn {
+    top: 64px;
+  }
+}
