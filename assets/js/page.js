@@ -60,16 +60,32 @@ function fetchNote(href, level) {
           if (window.MathJax) {
             window.MathJax.typeset();
           }
-          $(function () {
-            $(".page").resizable({
-              handles: 'e', minWidth: 400,
-              maxWidth: 1000
-            });
-          });
+          makePageResizable();
+          makeHeadingsCollapsible("h2");
+          makeHeadingsCollapsible("h3");
         }.bind(null, element, level),
         10
       );
     });
+}
+
+function makePageResizable() {
+  $(".page").resizable({
+    handles: 'e', minWidth: 400,
+    maxWidth: 1000
+  });
+}
+
+function makeHeadingsCollapsible(heading) {
+  $(heading).click(function () {
+    if ($(this).hasClass("collapsed")) {
+      $(this).nextUntil(heading).stop(true, true).slideDown(0);
+      $(this).removeClass("collapsed");
+    } else {
+      $(this).addClass("collapsed");
+      $(this).nextUntil(heading).stop(true, true).slideUp(0);
+    }
+  });
 }
 
 function initializePage(page, level) {
@@ -134,4 +150,8 @@ window.onload = function () {
       fetchNote(stacks[i], i + 1);
     }
   }
+
+  makePageResizable();
+  makeHeadingsCollapsible("h2");
+  makeHeadingsCollapsible("h3");
 };
